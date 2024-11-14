@@ -101,8 +101,6 @@ export default function Home() {
   )
 
   const sendData = async () => {
-    // console.log(`Sending data to ${import.meta.env.VITE_API_URL}/calculate`)
-
     const canvas = canvasRef.current
     if (canvas) {
       const response = await axios({
