@@ -229,7 +229,7 @@ export default function Home() {
           <Draggable
             key={index}
             defaultPosition={{ x: latexPosition.x, y: latexPosition.y }}
-            onStop={(e, data) => setLatexPosition({ x: data.x, y: data.y })}
+            onStop={(_, data) => setLatexPosition({ x: data.x, y: data.y })}
           >
             <div className='absolute text-white'>
               <div className='latex-content'>{latex}</div>
