@@ -1,0 +1,8 @@
+# requirements
+
+fastapi
+uvicorn
+python-dotenv
+pydantic
+google-generativeai
+Pillow
