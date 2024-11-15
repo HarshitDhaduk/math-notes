@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-from constants import SERVER_URL, PORT, ENV
+from constants import PORT, ENV
 from apps.calculator.route import router as calculator_router
 
 @asynccontextmanager
@@ -26,4 +26,4 @@ async def health():
  return {'message': "Server is up and running"}
 
 if __name__ == "__main__":
- uvicorn.run("main:app", host=SERVER_URL, port=int(PORT), reload=(ENV =="dev"))
+ uvicorn.run("main:app", host="0.0.0.0", port=int(PORT), reload=(ENV =="dev"))
